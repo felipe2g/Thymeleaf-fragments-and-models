@@ -5,9 +5,15 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class Vegetables {
+public class Page {
     @GetMapping
-    public String generateVegetablesPage(Model model) {
+    public String generateIndexPage(Model model) {
         return "index";
     }
+
+    @GetMapping(value = "/second")
+    public String generateSecondPage() {
+        return "second";
+    }
+
 }
